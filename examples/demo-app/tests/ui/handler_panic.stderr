@@ -1,0 +1,5 @@
+error: plugin `ui-plugins` panicked in global handler `ui_plugins::panicking::explode`: the handler tripped over record 7
+  --> src/lib.rs:11:22
+   |
+11 |     plenary::expand!(panic_bundle; crate::things);
+   |                      ^^^^^^^^^^^^

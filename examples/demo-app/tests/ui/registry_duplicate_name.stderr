@@ -1,0 +1,13 @@
+error: handler name `greet` is registered twice (also by `crate::a::handlers_a::greet`)
+         = note: first registered here (at src/a.rs:3:25)
+ --> src/b.rs:3:25
+  |
+3 |     #[registry::handler("greet")]
+  |                         ^^^^^^^
+  |
+ ::: src/lib.rs:8:5
+  |
+8 |     plenary::expand!(demo_macros; crate::a::handlers_a, crate::b::handlers_b);
+  |     ------------------------------------------------------------------------- in this macro invocation
+  |
+  = note: this error originates in the macro `crate::b::handlers_b::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

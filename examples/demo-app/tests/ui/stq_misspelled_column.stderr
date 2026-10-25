@@ -1,0 +1,10 @@
+error: query `ByEmail`: column `emial` does not exist on table `users` (columns: id, email)
+  --> src/lib.rs:18:24
+   |
+18 |     #[stq::query(sql = "SELECT * FROM users WHERE emial = {email}")]
+   |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+25 |     plenary::expand!(demo_macros; crate::users, crate::orders);
+   |     ---------------------------------------------------------- in this macro invocation
+   |
+   = note: this error originates in the macro `crate::orders::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

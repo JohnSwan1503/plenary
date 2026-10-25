@@ -1,0 +1,13 @@
+[package]
+name = "plenary-plugin"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Plugin API, engine and `bundle!` for plenary: safe stateful macro expansion."
+
+[dependencies]
+# `span-locations`: outside the compiler (tests) hidden names take their
+# location from proc-macro2's own source map, see `diag::span_key`.
+proc-macro2 = { workspace = true, features = ["span-locations"] }
+quote = { workspace = true }
+syn = { workspace = true }

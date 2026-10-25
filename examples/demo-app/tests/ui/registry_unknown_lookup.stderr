@@ -1,0 +1,10 @@
+error: no handler is registered as `gret`; did you mean `greet`?
+  --> src/lib.rs:11:27
+   |
+11 |         registry::lookup!("gret")(input)
+   |                           ^^^^^^
+...
+16 |     plenary::expand!(demo_macros; crate::h);
+   |     --------------------------------------- in this macro invocation
+   |
+   = note: this error originates in the macro `crate::h::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

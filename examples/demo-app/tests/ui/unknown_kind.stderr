@@ -1,0 +1,5 @@
+error: unknown kind `tabel` in namespace `stq`; did you mean `table`? (kinds of `stq`: table, query, sql)
+ --> src/lib.rs:6:12
+  |
+6 |     #[stq::tabel(name = "users")]
+  |            ^^^^^

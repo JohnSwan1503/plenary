@@ -1,0 +1,5 @@
+error: global handlers depend on each other in a cycle: `ui_plugins::cycle::left` (plugin `ui-plugins`) -> `ui_plugins::cycle::right` (plugin `ui-plugins`) -> `ui_plugins::cycle::left` (plugin `ui-plugins`)
+ --> src/lib.rs:4:22
+  |
+4 |     plenary::expand!(cycle_bundle;);
+  |                      ^^^^^^^^^^^^

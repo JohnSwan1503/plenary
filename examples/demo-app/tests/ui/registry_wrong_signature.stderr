@@ -1,0 +1,17 @@
+error[E0308]: mismatched types
+  --> src/lib.rs:8:12
+   |
+ 8 |     pub fn bad(input: &str, times: usize) -> String {
+   |            ^^^
+   |            |
+   |            incorrect number of function parameters
+   |            expected because of the type of the constant
+...
+14 |     plenary::expand!(demo_macros; crate::h);
+   |     --------------------------------------- in this macro invocation
+   |
+   = note: expected fn pointer `for<'a> fn(&'a str) -> String`
+                 found fn item `for<'a> fn(&'a str, usize) -> String {bad}`
+   = note: this error originates in the macro `crate::h::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0308`.

@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/plenary",
+    "crates/plenary-plugin",
+    "examples/registry",
+    "examples/registry-plugin",
+    "examples/stq-lite",
+    "examples/stq-lite-plugin",
+    "examples/stats-plugin",
+    "examples/demo-macros",
+    "examples/demo-upstream",
+    "examples/demo-app",
+    "examples/ui-support/ui-plugins",
+    "examples/ui-support/panic-bundle",
+    "examples/ui-support/cycle-bundle",
+    "examples/ui-support/missing-bundle",
+    "examples/ui-support/export-bundle",
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full", "extra-traits", "visit", "visit-mut"] }

@@ -1,0 +1,11 @@
+error: `cfg_attr` wrapping `registry::handler` isn't supported in v0 (R7); write the attribute directly with its own `#[cfg(..)]`
+ --> src/lib.rs:5:7
+  |
+5 |     #[cfg_attr(unix, registry::handler("maybe"))]
+  |       ^^^^^^^^
+
+error: `cfg_attr` wrapping `cfg` isn't supported in v0 (R7); write the attribute directly with its own `#[cfg(..)]`
+  --> src/lib.rs:10:7
+   |
+10 |     #[cfg_attr(unix, cfg(any()))]
+   |       ^^^^^^^^

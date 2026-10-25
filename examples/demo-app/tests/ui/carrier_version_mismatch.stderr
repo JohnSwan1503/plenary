@@ -1,0 +1,10 @@
+error: carrier version mismatch: source `crate::legacy` was collected with carrier format v1, but this bundle expects v2. Rebuild that crate against the same plenary version.
+  --> src/lib.rs:13:50
+   |
+13 |                 { $($acc)* source [ $($seg)* ] { ver 1 ; } }
+   |                                                  ^^^
+...
+22 |     plenary::expand!(demo_macros; crate::legacy);
+   |     -------------------------------------------- in this macro invocation
+   |
+   = note: this error originates in the macro `crate::legacy::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

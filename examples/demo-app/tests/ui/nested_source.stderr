@@ -1,0 +1,5 @@
+error: a source can't contain another source (R12): remove this `collect` from `inner` or move the module out of `outer`
+  --> src/lib.rs:11:20
+   |
+11 |     #[demo_macros::collect]
+   |                    ^^^^^^^

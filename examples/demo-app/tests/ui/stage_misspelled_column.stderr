@@ -1,0 +1,10 @@
+error: query `OwnerOf`: column `ownr_email` does not exist on table `accounts` (columns: id, owner_email, balance_cents)
+  --> src/lib.rs:9:24
+   |
+ 9 |     #[stq::query(sql = "SELECT ownr_email FROM accounts WHERE id = {id}")]
+   |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+16 |     plenary::expand!(demo_macros; demo_upstream::plan, crate::reports);
+   |     ------------------------------------------------------------------ in this macro invocation
+   |
+   = note: this error originates in the macro `crate::reports::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

@@ -1,0 +1,75 @@
+error[E0277]: column `users.id` has type `i64`, but parameter `user_id` has type `i32`
+  --> src/lib.rs:21:22
+   |
+21 |         pub user_id: i32,
+   |                      ^^^ `i64` and `i32` are different types
+...
+31 |     plenary::expand!(demo_macros; crate::users);
+   |     ------------------------------------------- in this macro invocation
+   |
+   = help: the trait `plan::_::SameTypeAs<i32>` is not implemented for `i64`
+note: required by a bound in `plan::_::check`
+  --> src/lib.rs:21:22
+   |
+21 |         pub user_id: i32,
+   |                      ^^^ required by this bound in `check`
+...
+31 |     plenary::expand!(demo_macros; crate::users);
+   |     ------------------------------------------- in this macro invocation
+   = note: this error originates in the macro `crate::users::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: parameter `email` has type `Vec<u8>`, which can't be sent to the database
+  --> src/lib.rs:26:20
+   |
+26 |         pub email: Vec<u8>,
+   |                    ^^^ `Vec<u8>` does not implement `::stq_lite::Param`
+...
+31 |     plenary::expand!(demo_macros; crate::users);
+   |     ------------------------------------------- in this macro invocation
+   |
+   = help: the trait `Param` is not implemented for `Vec<u8>`
+   = help: the following other types implement trait `Param`:
+             &str
+             String
+             bool
+             i32
+             i64
+note: required for `Vec<u8>` to implement `plan::_::MustImplement`
+  --> src/lib.rs:26:20
+   |
+26 |         pub email: Vec<u8>,
+   |                    ^^^
+...
+31 |     plenary::expand!(demo_macros; crate::users);
+   |     ------------------------------------------- in this macro invocation
+note: required by a bound in `plan::_::check`
+  --> src/lib.rs:26:20
+   |
+26 |         pub email: Vec<u8>,
+   |                    ^^^ required by this bound in `check`
+...
+31 |     plenary::expand!(demo_macros; crate::users);
+   |     ------------------------------------------- in this macro invocation
+   = note: this error originates in the macro `crate::users::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: column `users.email` has type `String`, but parameter `email` has type `Vec<u8>`
+  --> src/lib.rs:26:20
+   |
+26 |         pub email: Vec<u8>,
+   |                    ^^^ `String` and `Vec<u8>` are different types
+...
+31 |     plenary::expand!(demo_macros; crate::users);
+   |     ------------------------------------------- in this macro invocation
+   |
+   = help: the trait `plan::_::SameTypeAs<Vec<u8>>` is not implemented for `String`
+note: required by a bound in `plan::_::check`
+  --> src/lib.rs:26:20
+   |
+26 |         pub email: Vec<u8>,
+   |                    ^^^ required by this bound in `check`
+...
+31 |     plenary::expand!(demo_macros; crate::users);
+   |     ------------------------------------------- in this macro invocation
+   = note: this error originates in the macro `crate::users::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0277`.

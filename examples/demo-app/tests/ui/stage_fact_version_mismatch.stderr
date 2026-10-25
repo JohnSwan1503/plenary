@@ -1,0 +1,5 @@
+error: stage `crate::old_plan` exported `stq::Resolved` with plugin `stq-lite-plugin` v9.0.0, but this bundle has `stq-lite-plugin` v0.1.0 (major versions differ)
+  --> src/lib.rs:30:35
+   |
+30 |     plenary::expand!(demo_macros; crate::old_plan);
+   |                                   ^^^^^

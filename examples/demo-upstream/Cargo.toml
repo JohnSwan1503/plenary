@@ -1,0 +1,12 @@
+[package]
+name = "demo-upstream"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "A library crate that exports sources for other crates to expand."
+
+[dependencies]
+plenary = { path = "../../crates/plenary" }
+demo-macros = { path = "../demo-macros" }
+stq-lite = { path = "../stq-lite" }
+registry = { path = "../registry" }

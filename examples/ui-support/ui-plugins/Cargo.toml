@@ -1,0 +1,11 @@
+[package]
+name = "ui-plugins"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+description = "Plugins that exist only to make the UI tests fail in specific ways."
+
+[dependencies]
+plenary-plugin = { path = "../../../crates/plenary-plugin" }
+proc-macro2 = { workspace = true }

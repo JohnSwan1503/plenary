@@ -1,0 +1,12 @@
+[package]
+name = "registry-plugin"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Example plenary plugin: a build-time handler registry (the `registry` namespace). Not SQL-shaped."
+
+[dependencies]
+plenary-plugin = { path = "../../crates/plenary-plugin" }
+proc-macro2 = { workspace = true }
+quote = { workspace = true }
+syn = { workspace = true }

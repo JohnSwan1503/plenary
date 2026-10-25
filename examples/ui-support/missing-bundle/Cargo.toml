@@ -1,0 +1,13 @@
+[package]
+name = "missing-bundle"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+proc-macro = true
+
+[dependencies]
+plenary-plugin = { path = "../../../crates/plenary-plugin" }
+ui-plugins = { path = "../ui-plugins" }

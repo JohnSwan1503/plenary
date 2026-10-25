@@ -1,0 +1,17 @@
+error: source `crate::users` is listed twice in this `expand!`
+  --> src/lib.rs:12:49
+   |
+12 |     plenary::expand!(demo_macros; crate::users, crate::users);
+   |                                                 ^^^^^
+
+warning: use of deprecated constant `plan::_::warning`: table `users` is never used by a query in this collection
+  --> src/lib.rs:5:25
+   |
+ 5 |     #[stq::table(name = "users")]
+   |                         ^^^^^^^
+...
+12 |     plenary::expand!(demo_macros; crate::users, crate::users);
+   |     --------------------------------------------------------- in this macro invocation
+   |
+   = note: `#[warn(deprecated)]` on by default
+   = note: this warning originates in the macro `crate::users::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

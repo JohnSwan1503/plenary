@@ -1,0 +1,12 @@
+[package]
+name = "stats-plugin"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Example plenary plugin that reads other plugins' facts."
+
+[dependencies]
+plenary-plugin = { path = "../../crates/plenary-plugin" }
+registry-plugin = { path = "../registry-plugin" }
+stq-lite-plugin = { path = "../stq-lite-plugin" }
+quote = { workspace = true }

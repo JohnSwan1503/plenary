@@ -1,0 +1,10 @@
+error: query `Oops` references unknown table `userz` (tables in this collection: users, accounts)
+  --> src/lib.rs:11:24
+   |
+11 |     #[stq::query(sql = "SELECT id FROM userz")]
+   |                        ^^^^^^^^^^^^^^^^^^^^^^
+...
+16 |     plenary::expand!(demo_macros; crate::users, demo_upstream::accounts);
+   |     -------------------------------------------------------------------- in this macro invocation
+   |
+   = note: this error originates in the macro `crate::users::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

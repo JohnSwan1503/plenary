@@ -1,0 +1,5 @@
+error: handler `ui_plugins::missing::needs_orphan` (plugin `ui-plugins`) reads fact `ui_plugins::missing::Orphan`, but no handler in this bundle produces it
+ --> src/lib.rs:4:22
+  |
+4 |     plenary::expand!(missing_bundle;);
+  |                      ^^^^^^^^^^^^^^

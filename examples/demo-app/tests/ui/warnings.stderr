@@ -1,0 +1,18 @@
+warning: use of deprecated constant `audit::_::warning`: handler name `Shout` has uppercase letters; names are matched case-sensitively
+  --> src/lib.rs:17:25
+   |
+17 |     #[registry::handler("Shout")]
+   |                         ^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated constant `plan::_::warning`: table `audit_log` is never used by a query in this collection
+  --> src/lib.rs:12:25
+   |
+12 |     #[stq::table(name = "audit_log")]
+   |                         ^^^^^^^^^^^
+...
+24 |     plenary::expand!(demo_macros; crate::audit);
+   |     ------------------------------------------- in this macro invocation
+   |
+   = note: this warning originates in the macro `crate::audit::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

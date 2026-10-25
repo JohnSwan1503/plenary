@@ -1,0 +1,15 @@
+[package]
+name = "demo-macros"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "The example bundle: one proc-macro crate for the stats, registry and stq-lite plugins."
+
+[lib]
+proc-macro = true
+
+[dependencies]
+plenary-plugin = { path = "../../crates/plenary-plugin" }
+stats-plugin = { path = "../stats-plugin" }
+registry-plugin = { path = "../registry-plugin" }
+stq-lite-plugin = { path = "../stq-lite-plugin" }

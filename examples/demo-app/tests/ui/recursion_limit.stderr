@@ -1,0 +1,8 @@
+error: recursion limit reached while expanding `demo_macros::__finish!`
+  --> src/lib.rs:40:5
+   |
+40 |     plenary::expand!(demo_macros; crate::s0, crate::s1, crate::s2, crate::s3, crate::s4, crate::s5, crate::s6, crate::s7, crate::s8, crate::s9, crate::s10, crate::s11, crate::s12, crate::s13);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = help: consider increasing the recursion limit by adding a `#![recursion_limit = "30"]` attribute to your crate (`ui_recursion_limit`)
+   = note: this error originates in the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

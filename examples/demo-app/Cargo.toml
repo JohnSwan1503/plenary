@@ -1,0 +1,16 @@
+[package]
+name = "demo-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Example application expanding local and upstream sources with three plugins."
+
+[features]
+extra = []
+
+[dependencies]
+plenary = { path = "../../crates/plenary" }
+demo-macros = { path = "../demo-macros" }
+demo-upstream = { path = "../demo-upstream" }
+stq-lite = { path = "../stq-lite" }
+registry = { path = "../registry" }

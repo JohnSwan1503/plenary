@@ -1,0 +1,30 @@
+error: `greet` and `Greet` both map to the variant `Handler::Greet`
+         = note: `greet` is declared here (at src/lib.rs:9:25)
+  --> src/lib.rs:14:25
+   |
+14 |     #[registry::handler("Greet")]
+   |                         ^^^^^^^
+...
+26 |     plenary::expand!(demo_macros; crate::h);
+   |     --------------------------------------- in this macro invocation
+   |
+   = note: this error originates in the macro `crate::h::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: `hello-world` can't be a variant of `Handler`: a name must be letters, digits and underscores, start with a letter, and not be a keyword (it becomes `Handler::<Name>` with each `_`-separated part capitalised)
+  --> src/lib.rs:19:25
+   |
+19 |     #[registry::handler("hello-world")]
+   |                         ^^^^^^^^^^^^^
+...
+26 |     plenary::expand!(demo_macros; crate::h);
+   |     --------------------------------------- in this macro invocation
+   |
+   = note: this error originates in the macro `crate::h::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated constant `h::_::warning`: handler name `Greet` has uppercase letters; names are matched case-sensitively
+  --> src/lib.rs:14:25
+   |
+14 |     #[registry::handler("Greet")]
+   |                         ^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default

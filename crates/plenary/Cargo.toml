@@ -1,0 +1,9 @@
+[package]
+name = "plenary"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Facade for safe stateful macro expansion: `expand!` and the runtime support generated code needs."
+
+# Deliberately no dependencies: apps depend on this crate and it must stay light.
+[dependencies]

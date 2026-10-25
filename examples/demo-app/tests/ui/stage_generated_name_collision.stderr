@@ -1,0 +1,11 @@
+error: handler name `generated_echo` is registered twice (also by `demo_upstream::plan::generated_echo`)
+         = note: first registered here (at $WORKSPACE/examples/demo-upstream/src/lib.rs:47:22)
+  --> src/lib.rs:9:25
+   |
+ 9 |     #[registry::handler("generated_echo")]
+   |                         ^^^^^^^^^^^^^^^^
+...
+16 |     plenary::expand!(demo_macros; demo_upstream::plan, crate::h);
+   |     ------------------------------------------------------------ in this macro invocation
+   |
+   = note: this error originates in the macro `crate::h::__pl_carrier` which comes from the expansion of the macro `plenary::expand` (in Nightly builds, run with -Z macro-backtrace for more info)

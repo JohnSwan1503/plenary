@@ -1,0 +1,5 @@
+error: carrier calling convention mismatch: source `crate::legacy` was collected with carrier format v1 (its carrier handed `crate::users` back to the collection instead of calling that source's carrier), but this bundle expects v2. Rebuild that crate against the same plenary version.
+  --> src/lib.rs:29:35
+   |
+29 |     plenary::expand!(demo_macros; crate::legacy, crate::users);
+   |                                   ^^^^^

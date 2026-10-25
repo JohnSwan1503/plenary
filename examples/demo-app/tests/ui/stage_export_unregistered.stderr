@@ -1,0 +1,5 @@
+error: plugin `ui-plugins` exported a `ui_plugins::unregistered_export::Secret`, but no plugin in this bundle registered that type with `.exportable::<Secret>()`; add the registration to the plugin that defines the type
+ --> src/lib.rs:6:22
+  |
+6 |     plenary::expand!(export_bundle;);
+  |                      ^^^^^^^^^^^^^
